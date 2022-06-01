@@ -15,3 +15,7 @@
     padding: 1rem;
     border: solid gray 1px;
 }
+
+textarea {
+    height: 100px;
+}

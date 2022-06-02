@@ -1,5 +1,6 @@
 # Short_Url
-URL Shortener Web Application created for a Portfolio Piece for my JavaScript Class.
+URL Shortener Web Application created for a Portfolio Piece in my JavaScript Class.
+
+Using the TinyOne API.
 
 Created by: Damon Windsor
-Assisted by: Daniel Fitzsimmonds

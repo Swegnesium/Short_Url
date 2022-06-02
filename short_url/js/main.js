@@ -34,6 +34,7 @@ function userUrl() {
 	// Calling create() Function when userUrl() is called
 	create(input)
 
+
 }
 
 
@@ -57,9 +58,8 @@ async function create(longURL) {
 	link.href = data.data.tiny_url
 	link.innerHTML = data.data.tiny_url
 	document.getElementById("shortened").append(link)
-	console.log(data.data.tiny_url)
+	document.getElementById('searchBox').value = '';
+	// document.getElementById('shortened').innerHTML = link;
 	console.log(data)
 }
-
-
 

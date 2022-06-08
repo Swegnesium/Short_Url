@@ -12,18 +12,21 @@ const TOKEN = "Ul7iF9tRRjBmiiIW6xY39Adzgu12fRosT4sHqQoMtjDi5f4sFFXKjlUyjhYl";
 
 
 // Creates a Click event on the button that runs Functions
-searchButton.addEventListener('click', userUrl, create, function(validateEntry) {
+searchButton.addEventListener('click', function(validateEntry) {
 
-	// Validation to ensure user entered an Input (Needs work, wont display error msg)
+	// Validation to ensure user entered an Input (Valid URL part needs work)
 	var x = document.forms["myForm"]["uUrl"].value;
+	let text = x;
+	let pattern = /www./i;
+	let result = text.match(!pattern);
 	if (x == "") {
-	  	alert("URL Must be Filled out");
-		console.log("URL must be filled out")
-		return false;
-	} else {
+		document.getElementById("errorMsg").innerHTML = "URL Must be filled out."
 
-  }
-  validateEntry()
+	// } else if (result) {
+	// 	document.getElementById("errorMsg").innerHTML = "Please enter a valid URL";
+    } else {
+		userUrl();
+	}
 });
 
 
@@ -33,8 +36,6 @@ function userUrl() {
 	toString(input)
 	// Calling create() Function when userUrl() is called
 	create(input)
-
-
 }
 
 
@@ -57,8 +58,7 @@ async function create(longURL) {
 	const link = document.createElement("a")
 	link.href = data.data.tiny_url
 	link.innerHTML = data.data.tiny_url
+	document.getElementById("shortened").innerHTML = '';
 	document.getElementById("shortened").append(link)
 	document.getElementById('searchBox').value = '';
-	// document.getElementById('shortened').innerHTML = link;
-	console.log(data)
 }

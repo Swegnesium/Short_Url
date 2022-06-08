@@ -66,15 +66,17 @@
         </ul></br>
       </div>
 
-
+      <!-- User enters their URL Below -->
         <div class="gen bg-light p-2 pt-4 mt-3">
             <form name="myForm">
-              <h4>Enter your URL below:</h4>
-                <input id="searchBox" class="form-control form-control-lg" type="text" name="uUrl" placeholder="Search here..."
+              <h4 class="pb-3">Enter your URL below:</h4>
+              <p id="errorMsg" class="text-danger"></p>
+              <input id="searchBox" class="form-control form-control-lg pt-2" type="text" name="uUrl" placeholder="Search here..."
                     aria-label="Search">
-                <button id="searchButton" type="button" class="btn btn-success w-100 mt-2 mb-2">Shorten URL</button>
+              <button id="searchButton" type="button" class="btn btn-success w-100 mt-2 mb-2">Shorten URL</button>
             </form>
 
+            <!-- The results will display below -->
             <div id="results" class="grid">
                 <h5 class="text-center">Your Tiny URL is: <span id="shortened" name="shortened"></span></h5>
             </div>

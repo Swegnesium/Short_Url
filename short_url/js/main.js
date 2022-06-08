@@ -62,4 +62,3 @@ async function create(longURL) {
 	// document.getElementById('shortened').innerHTML = link;
 	console.log(data)
 }
-

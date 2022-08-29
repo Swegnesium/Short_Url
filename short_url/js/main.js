@@ -8,7 +8,7 @@ const results = document.getElementById('results');
 // Where we find our JSON data
 const baseUrl = "https://tinyurl.com/openapi/v2.json";
 // Our Token for the API
-const TOKEN = "Ul7iF9tRRjBmiiIW6xY39Adzgu12fRosT4sHqQoMtjDi5f4sFFXKjlUyjhYl";
+const TOKEN = "ENTER_YOUR_TOKEN";
 
 
 // Creates a Click event on the button that runs Functions

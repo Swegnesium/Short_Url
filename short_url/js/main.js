@@ -8,8 +8,10 @@ const results = document.getElementById('results');
 // Where we find our JSON data
 const baseUrl = "https://tinyurl.com/openapi/v2.json";
 // Our Token for the API
-const TOKEN = "ENTER_YOUR_TOKEN";
+const TOKEN = "vQ2WHCQJ0IGLuiUD619IIYn0g1bzQeaiKdUkEAZ5c8sj5MBWc1oASTNqDFtD";
 
+// fk it, here's my token; vQ2WHCQJ0IGLuiUD619IIYn0g1bzQeaiKdUkEAZ5c8sj5MBWc1oASTNqDFtD
+        
 
 // Creates a Click event on the button that runs Functions
 searchButton.addEventListener('click', function(validateEntry) {
@@ -42,7 +44,7 @@ function userUrl() {
 
 // This uses the API to shorten the URL
 async function create(longURL) {
-	const response = await fetch('https://api.tinyurl.com/create?api_token=Ul7iF9tRRjBmiiIW6xY39Adzgu12fRosT4sHqQoMtjDi5f4sFFXKjlUyjhYl', {
+	const response = await fetch('https://api.tinyurl.com/create?api_token=vQ2WHCQJ0IGLuiUD619IIYn0g1bzQeaiKdUkEAZ5c8sj5MBWc1oASTNqDFtD', {
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
@@ -51,11 +53,12 @@ async function create(longURL) {
 		body: JSON.stringify({
 			// longURL is identified as the Original URL within the API
 			url: longURL,
-			domain: "tiny.one"
+			domain: "tinyurl.com"
 		})
 	})
 	const data = await response.json()
 	const link = document.createElement("a")
+	console.log(data);
 	link.href = data.data.tiny_url
 	link.innerHTML = data.data.tiny_url
 	document.getElementById("shortened").innerHTML = '';

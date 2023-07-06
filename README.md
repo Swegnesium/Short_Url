@@ -16,4 +16,4 @@ Created by: Damon Windsor
 
 
 ****Current Bugs, will fix in spare time****
-- Results is showing as "undefined"
+- All bugs fixed
